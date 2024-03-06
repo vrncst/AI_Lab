@@ -31,13 +31,13 @@ conda activate planning-lab
 jupyter notebook
 ```
 
-The last command will open your browser for you to start working. To open the tutorial navigate with your browser to the current lesson notebook (*Lesson_\*/lesson_\*_problem.ipynb*).
+The last command will open your browser for you to start working. To open the tutorial navigate with your browser to the dedicated notebook (*tutorial/tutorial.ipynb*).
 
 
 
 ## Authors
 
-*  **Luca Marzari** - luca.marzari@univr.it
+*  **Luca Marzari** 
 *  **Alessandro Farinelli** - alessandro.farinelli@univr.it
 
 
