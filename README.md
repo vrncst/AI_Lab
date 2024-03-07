@@ -18,7 +18,7 @@ Code for the lab of Artificial Intelligence course, Bachelor's degree in Compute
 
 3. Setup Conda environment:
    - `git clone https://github.com/vrncst/AI_Lab`
-   - `conda env create -f tools/ai-lab-env.yml`
+   - `conda env create -f AI_Lab/tools/ai-lab-env.yml`
 
    
 
@@ -27,7 +27,7 @@ Code for the lab of Artificial Intelligence course, Bachelor's degree in Compute
 To start the environment and work on your assignments, navigate to the downloaded folder root *(AI_Lab)* and run:
 
 ```
-conda activate planning-lab
+conda activate ai-lab
 jupyter notebook
 ```
 
@@ -37,7 +37,7 @@ The last command will open your browser for you to start working. To open the tu
 
 ## Authors
 
-*  **Luca Marzari** 
+*  **Celeste Veronese**
 *  **Alessandro Farinelli** - alessandro.farinelli@univr.it
 
 
