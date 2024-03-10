@@ -2,7 +2,7 @@
 Code for the lab of Artificial Intelligence course, Bachelor's degree in Computer Science 2023/2024, University of Verona
 ## Setup 
 
-1. Download [Anaconda](https://www.anaconda.com/distribution/#download-section) for your System.
+1. Download [Anaconda](https://docs.anaconda.com/free/miniconda/) for your System.
 
 2. Install Anaconda and Git:
    - On **Linux/Mac**: 
