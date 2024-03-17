@@ -205,18 +205,18 @@ class CheckResult_L1A1():
         print(bcolors.OKCYAN + '##########################################'+ bcolors.ENDC)
 
 
-        print("Your solution: {}".format(solution_2_string(self.student_ts_sol[0], self.env)))
+        print("Solution: {}".format(solution_2_string(self.student_ts_sol[0], self.env)))
         print("N° of nodes explored: {}".format(self.student_ts_sol[1]))
         print("Max n° of nodes in memory: {}\n".format(self.student_ts_sol[2]))
 
         if solution_2_string(self.student_ts_sol[0], self.env) != [(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]:
-            print(bcolors.FAIL + "> Your solution is not correct, should be: \n[(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]\n" + bcolors.ENDC)
+            print(bcolors.FAIL + "> The solution is not correct, should be: \n[(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]\n" + bcolors.ENDC)
         elif self.student_ts_sol[1] != 103723:
             print(bcolors.FAIL + "> The number of node explored is not correct, should be: 103723\n" + bcolors.ENDC)
         elif self.student_ts_sol[2] != 77791:
             print(bcolors.FAIL + "> The max number of nodes in memory is not correct, should be: 77791\n" + bcolors.ENDC)
-        else:
-            print(bcolors.BOLD + bcolors.OKGREEN + '===> Your solution is correct!\n'+ bcolors.ENDC)
+        #else:
+        #    print(bcolors.BOLD + bcolors.OKGREEN + '===> Your solution is correct!\n'+ bcolors.ENDC)
 
 
     def check_sol_gs(self):
@@ -224,12 +224,12 @@ class CheckResult_L1A1():
         print(bcolors.OKCYAN + '#######  BFS Graph SEARCH PROBLEM  #######' + bcolors.ENDC)
         print(bcolors.OKCYAN + '##########################################'+ bcolors.ENDC)
 
-        print("Solution: {}".format(solution_2_string(self.student_gs_sol[0], self.env)))
+        print("Your solution: {}".format(solution_2_string(self.student_gs_sol[0], self.env)))
         print("N° of nodes explored: {}".format(self.student_gs_sol[1]))
         print("Max n° of nodes in memory: {}\n".format(self.student_gs_sol[2]))
 
         if solution_2_string(self.student_gs_sol[0], self.env) != [(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]:
-            print(bcolors.FAIL + "> Your solution is not correct, should be: \n[(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]\n" + bcolors.ENDC)
+            print(bcolors.FAIL + "> The solution is not correct, should be: \n[(0, 1), (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]\n" + bcolors.ENDC)
         elif self.student_gs_sol[1] != 59:
             print(bcolors.FAIL + "> The number of node explored is not correct, should be: 59\n" + bcolors.ENDC)
         elif self.student_gs_sol[2] != 15:
@@ -239,12 +239,11 @@ class CheckResult_L1A1():
 
 
 class CheckResult_L1A2():
-    def __init__(self, student_ts_sol, student_gs_sol, env):
+    def __init__(self, student_ts_sol, env):
        
         # student_ts_sol is a list where student_ts_sol[0] = solution_ts, student_ts_sol[1] = time_ts, student_ts_sol[2] = memory_ts, student_ts_sol[3] = iterations_ts
         # same fore the graph search solutions
         self.student_ts_sol = student_ts_sol
-        self.student_gs_sol = student_gs_sol
         self.env = env
 
     def check_sol_ts(self):
@@ -267,29 +266,6 @@ class CheckResult_L1A2():
             print(bcolors.FAIL + "> The max number of nodes in memory is not correct, should be: 9\n" + bcolors.ENDC)
         else:
             print(bcolors.BOLD + bcolors.OKGREEN + '===> Your solution is correct!\n'+ bcolors.ENDC)
-
-
-    def check_sol_gs(self):
-        print(bcolors.OKCYAN + '##########################################' + bcolors.ENDC)
-        print(bcolors.OKCYAN + '#######  IDS GRAPH SEARCH PROBLEM  #######' + bcolors.ENDC)
-        print(bcolors.OKCYAN + '##########################################'+ bcolors.ENDC)
-
-        print("Necessary Iterations: {}".format(self.student_gs_sol[3]))
-        print("Solution: {}".format(solution_2_string(self.student_gs_sol[0], self.env)))
-        print("N° of nodes explored: {}".format(self.student_gs_sol[1]))
-        print("Max n° of nodes in memory: {}\n".format(self.student_gs_sol[2]))
-
-        if self.student_gs_sol[3] != 11:
-            print(bcolors.FAIL + "> Your necessary iterations are not correct, should be: 11\n" + bcolors.ENDC)
-        elif solution_2_string(self.student_gs_sol[0], self.env) != [(0, 1), (0, 0), (1, 0), (1, 1), (2, 1), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]:
-            print(bcolors.FAIL + "> Your solution is not correct, should be: \n[(0, 1), (0, 0), (1, 0), (1, 1), (2, 1), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3)]\n" + bcolors.ENDC)
-        elif self.student_gs_sol[1] != 132:
-            print(bcolors.FAIL + "> The number of node explored is not correct, should be: 132\n" + bcolors.ENDC)
-        elif self.student_gs_sol[2] != 11:
-            print(bcolors.FAIL + "> The max number of nodes in memory is not correct, should be: 11\n" + bcolors.ENDC)
-        else:
-            print(bcolors.BOLD + bcolors.OKGREEN + '===> Your solution is correct!\n'+ bcolors.ENDC)
-
 
 
 def CheckResult_UCS(solution, time, memory, env):
@@ -552,43 +528,3 @@ class CheckResult_L3():
             print(bcolors.FAIL + f"> Your policy\n {self.policy} is not optimal!\n\nOur policy is:\n {sol}" + bcolors.ENDC)
         else:
             print(bcolors.BOLD + bcolors.OKGREEN + f'===> Your solution is correct!\n\nPolicy:\n{self.policy}'+ bcolors.ENDC)
-
-
-class CheckResult_L4():
-
-    def __init__(self, policy_render):
-        self.policy = policy_render
-    
-    def check_qlearning(self):
-        print()
-        print(bcolors.OKCYAN +  '#####################################################' + bcolors.ENDC)
-        print(bcolors.OKCYAN +  '#######  Environment: Cliff-v0 \tQ-Learning  #########' + bcolors.ENDC)
-        print(bcolors.OKCYAN +  '#####################################################'+ bcolors.ENDC)
-        print()
-
-        
-        sol = np.array([['D', 'U', 'D', 'R', 'D', 'R', 'D', 'D', 'L', 'D', 'D', 'D'],
-                        ['D', 'U', 'R', 'R', 'R', 'U', 'D', 'R', 'D', 'R', 'R', 'D'],
-                        ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'D'],
-                        ['U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U']])
-
-        print(bcolors.BOLD + bcolors.OKGREEN + f'===> Your policy:\n\n{self.policy}'+ bcolors.ENDC)
-        print()
-        print(bcolors.BOLD + bcolors.OKGREEN + f'===> Our policy:\n\n{sol}'+ bcolors.ENDC)
-
-
-    def check_sarsa(self):
-        print()
-        print(bcolors.OKCYAN +  '################################################' + bcolors.ENDC)
-        print(bcolors.OKCYAN +  '#######  Environment: Cliff-v0 \tSARSA  #########' + bcolors.ENDC)
-        print(bcolors.OKCYAN +  '################################################'+ bcolors.ENDC)
-        print()
-
-        sol = np.array([['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'D', 'D'],
-        ['U', 'U', 'U', 'U', 'R', 'U', 'U', 'R', 'R', 'U', 'R', 'D'],
-        ['U', 'U', 'U', 'U', 'U', 'L', 'U', 'R', 'R', 'U', 'R', 'D'],
-        ['U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U', 'U']])          
-        
-        print(bcolors.BOLD + bcolors.OKGREEN + f'===> Your policy:\n\n{self.policy}'+ bcolors.ENDC)
-        print()
-        print(bcolors.BOLD + bcolors.OKGREEN + f'===> Our policy:\n\n{sol}'+ bcolors.ENDC)
