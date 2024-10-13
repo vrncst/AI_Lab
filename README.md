@@ -1,5 +1,5 @@
 # AI_Lab
-Code for the lab of Artificial Intelligence course, Bachelor's degree in Computer Science 2023/2024, University of Verona
+Code for the lab of Artificial Intelligence course, Bachelor's degree in Computer Science, University of Verona
 ## Setup 
 
 1. Download [Anaconda](https://docs.anaconda.com/free/miniconda/) for your System.
