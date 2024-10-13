@@ -38,6 +38,7 @@ The last command will open your browser for you to start working. To open the tu
 ## Authors
 
 *  **Celeste Veronese**
+*  **Luca Marzari (Tutor for 24/25)**
 *  **Alessandro Farinelli** - alessandro.farinelli@univr.it
 
 
